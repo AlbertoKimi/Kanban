@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  --Primario: #6ccaf3bc;
+  --Secundario: #ffffff;
+  --Texto: #000000;
+  --boton: #1561dc;
+  --boton-hover: #0011E6;
+  --Transicion: background-color 0.25s ease;
+  --Sombra: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --Borde: 2px solid #d0cad9;
+  --Hover-añadir-tarjeta: rgba(0, 0, 0, 0.05);
+  --Size-h1: 32px;
+  --Size-h2: 1.2rem;
+  --Sixe-p: 14px;
+
+}
+
+body {
+
+  min-height: 100vh;
+  padding: 10px;
+  background: linear-gradient(135deg, #4cfcf6 0%, #005AE6 50%, #3201c8 100%);
+
+}
+
+main {
+
+  padding: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+
+}
+
+.contenedor-kanban {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.titulo {
+  background-color: var(--Primario);
+  border: var(--Borde);
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  box-shadow: var(--Sombra);
+}
+
+h1 {
+
+  font-size: var(--Size-h1);
+  padding: 10px;
+
+}
+
+h2 {
+  color: var(--Texto);
+  text-align: center;
+  font-size: var(--Size-h2);
+}
+
+section {
+  background-color: var(--Secundario);
+  border-radius: 8px;
+  padding: 10px;
+  height: 610px;
+  border: var(--Borde);
+}
+
+.contenedor-tarjetas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.borrar {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: var(--Transicion);
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.borrar:hover {
+
+  transform: scale(1.4);
+}
+
+article {
+  background-color: var(--Secundario);
+  border: var(--Borde);
+  border-radius: 8px;
+  padding: 14px 16px;
+  box-shadow: var(--Sombra);
+  transition: var(--Transicion);
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+article:hover .borrar {
+
+  opacity: 1;
+
+}
+
+.texto {
+  flex: 1;
+  font-size: var(--Sixe-p);
+  line-height: 1.6;
+  color: var(--Texto);
+  transition: var(--Transicion);
+  max-height: 100%;
+  overflow: hidden;
+
+}
+
+article:hover .texto {
+
+  padding-right: 20px;
+}
+
+.tarjeta:hover {
+
+  background-color: var(--Primario);
+
+}
+
+.input-contenedor {
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.area-input {
+
+  padding-top: 10px;
+  padding-left: 10px;
+  vertical-align: top;
+  width: 100%;
+  height: 100px;
+}
+
+
+.contenedor-añadir {
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+
+}
+
+.añadir-tarjeta {
+
+  cursor: pointer;
+  color: var(--Secundario);
+  background-color: var(--boton);
+  box-shadow: var(--Sombra);
+  border-radius: 8px;
+  width: 35%;
+  height: 35px;
+  font-size: var(--Sixe-p);
+}
+
+.añadir-tarjeta:hover {
+
+  background-color: var(--boton-hover);
+}
+
+.borrar2 {
+
+  display: flex;
+  position: absolute;
+  right: 0px;
+  background-color: transparent;
+  color: var(--Texto);
+  border: none;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--Transicion);
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+
+}
+
+.borrar2:hover {
+  transform: scale(1.4);
+}
+
+.añadir-contenedor {
+  width: 100%;
+  background-color: transparent;
+  color: var(--color-texto-secundario);
+  border: none;
+  border-radius: var(--radio-borde);
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transicion);
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.añadir-contenedor:hover {
+  background-color: var(--Hover-añadir-tarjeta);
+  color: var(--color-texto);
+}
+
+.icono {
+  font-size: 1.2rem;
+  font-weight: bold;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='es'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='style.css'>
+  <script src='script.js' defer></script>
+  <title>Kanban</title>
+</head>
+
+<body>
+
+  <main>
+    <h1>Kanban</h1>
+    <div class="contenedor-kanban">
+      <section class="contenedor-columna" id="todo">
+        <div class="titulo">
+          <h2>Todo</h2>
+        </div>
+        <div class="contenedor-tarjetas">
+          <article class="tarjeta">
+            <span class="texto"> Terminar la tarea 2 de cliente. Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              Phasellus sequi cumque nihil beatae provident quisquam velin. magnam fuga rerum odit a speciam recusandae.
+              Adipisci temporibus sed susciunt laboriosam vel tenetur.</span>
+            <button class="borrar">×</button>
+          </article>
+          <article class="tarjeta">
+            <span class="texto">Terminar la tarea 3 de cliente. Lorem ipsum dolor sit amet consectetur adipiscing
+              elit.</span>
+            <button class="borrar">×</button>
+          </article>
+          <article class="tarjeta">
+            <span class="texto">Terminar la tarea 2 de diseño</span>
+            <button class="borrar">×</button>
+          </article>
+          <article class="tarjeta">
+            <span class="texto">Terminar la tarea 1 de servidor. Lorem ipsum dolor sit amet consectetur adipiscing
+              elit.</span>
+            <button class="borrar">×</button>
+          </article>
+
+          <div class="input-contenedor" id="input-todo">
+            <textarea class="area-input" placeholder="Introduce un título"></textarea>
+            <div class="contenedor-añadir">
+              <button class="añadir-tarjeta">Añadir tarjeta</button>
+              <button class="borrar2">×</button>
+            </div>
+          </div>
+      </section>
+
+      <section class="contenedor-columna" id="doing">
+        <div class="titulo">
+          <h2>Doing</h2>
+        </div>
+        <div class="contenedor-tarjetas">
+          <article class="tarjeta">
+            <span class="texto">Terminar la tarea 1 de cliente. Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              Minima dicta ullam unde! Qussi eos magnam debitis impedit? Cupiditate nesciore.</span>
+            <button class="borrar">×</button>
+          </article>
+        </div>
+
+        <button class="añadir-contenedor">
+          <span class="icono">+</span>
+          <span>Añade una tarjeta</span>
+        </button>
+
+      </section>
+
+      <section class="contenedor-columna" id="done">
+        <div class="titulo">
+          <h2>Done</h2>
+        </div>
+        <div class="contenedor-tarjetas"></div>
+
+        <button class="añadir-contenedor">
+          <span class="icono">+</span>
+          <span>Añade una tarjeta</span>
+        </button>
+
+      </section>
+    </div>
+
+  </main>
+</body>
+
+</html>
