@@ -11,7 +11,7 @@
   --Texto: #000000;
   --boton: #1561dc;
   --boton-hover: #0011E6;
-  --Transicion: background-color 0.25s ease;
+  --Transicion: all 0.4s ease-in-out;
   --Sombra: 0 1px 2px rgba(0, 0, 0, 0.1);
   --Borde: 2px solid #d0cad9;
   --Hover-añadir-tarjeta: rgba(0, 0, 0, 0.05);
@@ -140,7 +140,7 @@ article:hover .borrar {
 
 article:hover .texto {
 
-  padding-right: 20px;
+  padding-right: 40px;
 }
 
 .tarjeta:hover {
