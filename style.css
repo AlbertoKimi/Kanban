@@ -247,7 +247,9 @@ article:hover .texto {
   font-weight: bold;
 }
 
-@media (max-width: 340px) {
+/* MEDIA MÓVILES MEDIANOS */
+
+@media (min-width: 330px) and (max-width: 430px) {
   h1 {
     font-size: 24px;
   }
@@ -257,7 +259,47 @@ article:hover .texto {
   }
 
   section {
-    width: 90%;
+    
+    width: 100%;
+    height: 610px;
+  }
+
+  .texto {
+    font-size: 14px;
+  }
+
+  .area-input {
+    font-size: 12px;
+  }
+
+  .añadir-tarjeta {
+    font-size: 12px;
+    width: 45%;
+  }
+
+  .añadir-contenedor {
+    font-size: 0.85rem;
+  }
+
+  article {
+    padding: 10px 12px;
+  }
+}
+
+/* MEDIA MÓVILES PEQUEÑOS */
+
+@media (max-width: 330px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  section {
+    
+    width: 92%;
     height: 610px;
   }
 
